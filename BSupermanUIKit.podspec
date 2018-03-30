@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  A UIKit library for bsuperman.
+  A UIKit library for bsuperman project.example color,button,label....
                        DESC
 
   s.homepage         = 'https://github.com/gemini2100/BSupermanUIKit'
