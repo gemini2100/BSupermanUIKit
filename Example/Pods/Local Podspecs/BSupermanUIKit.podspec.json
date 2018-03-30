@@ -1,0 +1,24 @@
+{
+  "name": "BSupermanUIKit",
+  "version": "0.1.0",
+  "summary": "A UIKit library for bsuperman.",
+  "description": "A UIKit library for bsuperman.",
+  "homepage": "https://github.com/gemini2100/BSupermanUIKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "gemini2100@msn.com": "gemini2100@msn.com"
+  },
+  "source": {
+    "git": "https://github.com/gemini2100/BSupermanUIKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "BSupermanUIKit/Classes/**/*",
+  "swift_version": "4.0",
+  "frameworks": "UIKit"
+}

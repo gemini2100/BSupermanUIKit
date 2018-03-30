@@ -1,0 +1,16 @@
+PODS:
+  - BSupermanUIKit (0.1.0)
+
+DEPENDENCIES:
+  - BSupermanUIKit (from `../`)
+
+EXTERNAL SOURCES:
+  BSupermanUIKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  BSupermanUIKit: 915ef34cce259764c4d685af1aaebab1f350101d
+
+PODFILE CHECKSUM: 54d753cc77ce8b5f56a2fb945acffc161aa6b233
+
+COCOAPODS: 1.4.0
