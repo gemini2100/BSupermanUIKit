@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BSupermanUIKit'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A UIKit library for bsuperman.'
 
 # This description is used to generate tags and improve search results.
