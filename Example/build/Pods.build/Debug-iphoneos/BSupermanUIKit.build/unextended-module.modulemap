@@ -1,0 +1,10 @@
+framework module BSupermanUIKit {
+  umbrella header "BSupermanUIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module BSupermanUIKit.__Swift {
+    exclude header "BSupermanUIKit-Swift.h"
+}

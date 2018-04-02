@@ -1,0 +1,11 @@
+framework module BSupermanUIKit {
+  umbrella header "BSupermanUIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module BSupermanUIKit.Swift {
+    header "BSupermanUIKit-Swift.h"
+    requires objc
+}
