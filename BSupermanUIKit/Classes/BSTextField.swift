@@ -42,6 +42,17 @@ public class BSTextField: UITextField {
         }
         return resignFirstResponder
     }
+
+    override public func textRect(forBounds bounds: CGRect) -> CGRect
+    {
+        return UIEdgeInsetsInsetRect(bounds,
+                                     UIEdgeInsetsMake(0, 5, 0, 5))
+    }
+    override public func placeholderRect(forBounds bounds: CGRect) -> CGRect
+    {
+        return UIEdgeInsetsInsetRect(bounds,
+                                     UIEdgeInsetsMake(0, 5, 0, 5))
+    }
     
 }
 
