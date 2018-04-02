@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "998A1179E75E73EC8C6C8304AD272BEC"
+               BlueprintIdentifier = "6DC0DE4516518F66F78386D5D237BCA8"
                BlueprintName = "BSupermanUIKit"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "BSupermanUIKit.framework">

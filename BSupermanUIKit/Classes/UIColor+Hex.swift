@@ -20,12 +20,16 @@ import UIKit
 public extension UIColor {
     typealias Hex = String
     
-    convenience init?(_ hex: Hex, alpha: CGFloat? = nil) {
-        
-        guard let hexType = Type(from: hex), let components = hexType.components() else {
-            return nil
+    convenience init(_ hex: Hex, alpha: CGFloat? = nil) {
+
+        if let hexType = Type(from: hex), let components = hexType.components()
+        {
+            self.init(red: components.red, green: components.green, blue: components.blue, alpha: alpha ?? components.alpha)
         }
-        self.init(red: components.red, green: components.green, blue: components.blue, alpha: alpha ?? components.alpha)
+        else
+        {
+            self.init(red: 0, green: 0, blue: 0, alpha: 0)
+        }
     }
     
     /// The string hex value representation of the current color

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BSupermanUIKit'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'A UIKit library for bsuperman.'
 
 # This description is used to generate tags and improve search results.
@@ -24,11 +24,11 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/gemini2100/BSupermanUIKit'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'gemini2100@msn.com' => 'gemini2100@msn.com' }
+  s.author           = { 'gemini2100' => 'gemini2100@msn.com' }
   s.source           = { :git => 'https://github.com/gemini2100/BSupermanUIKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'BSupermanUIKit/Classes/**/*'
   s.swift_version = '4.0'
