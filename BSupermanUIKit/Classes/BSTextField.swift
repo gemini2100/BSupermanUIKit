@@ -18,6 +18,10 @@ public class BSTextField: UITextField {
         layer.borderWidth = 1
         layer.cornerRadius = 5
         layer.masksToBounds = true
+
+        let paddingView = UIView(frame: CGRect(x:0,y: 0, width:5, height:1))
+        leftView = paddingView
+        leftViewMode = UITextFieldViewMode.always
     }
     
     required public init(coder aDecoder: NSCoder)
