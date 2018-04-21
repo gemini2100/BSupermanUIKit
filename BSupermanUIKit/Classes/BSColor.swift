@@ -12,7 +12,8 @@ public enum BSThemeColor {
     
     case BSTextColorTitle       ///333333,重要级文字、标题颜色
     case BSTextColorNormal      ///666666,普通无级别段落文字颜色
-    case BSTextColorTiny        ///999999,辅助次级字体颜色
+    case BSTextColorTiny        ///999999,辅助次级字体颜色,灰色
+    
     
     case BSDivLineColorDark     ///cccccc,分割线深色
     case BSDivLineColorMid      ///e7e7e7,分割线中色
@@ -24,10 +25,11 @@ public enum BSThemeColor {
     case BSTitleBlue            ///3399ff 蓝色，特别强调的文字、按钮、图标
     case BSBlue                 ///5f97d8 蓝色，中性类标识
     case BSRed                  ///ea1f32 红色，退出、删除、错误、警告
-    case BSYellow               ///eaa41f 用于警示等引起注意类标识
-    case BSGreen                ///60a75b 用于成功、完成、进行等肯定类标识
+    case BSYellow               ///eaa41f 橘黄色，用于警示等引起注意类标识
+    case BSGreen                ///60a75b 深绿色，用于成功、完成、进行等肯定类标识
     
     case BSInactiveGary         ///cccccc 用于失去焦点、禁用颜色
+    case BSWhite                ///ffffff 白色
     
     public var color: UIColor {
         switch self {
@@ -63,7 +65,8 @@ public enum BSThemeColor {
             
         case .BSInactiveGary:
             return UIColor("cccccc")
-            
+        case .BSWhite:
+            return UIColor("ffffff")
             
         }
     }

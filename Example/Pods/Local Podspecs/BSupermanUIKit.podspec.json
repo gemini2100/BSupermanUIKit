@@ -1,6 +1,6 @@
 {
   "name": "BSupermanUIKit",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "summary": "A UIKit library for bsuperman.",
   "description": "A UIKit library for bsuperman project.example color,button,label....",
   "homepage": "https://github.com/gemini2100/BSupermanUIKit",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/gemini2100/BSupermanUIKit.git",
-    "tag": "0.1.3"
+    "tag": "0.1.5"
   },
   "platforms": {
     "ios": "10.0"
