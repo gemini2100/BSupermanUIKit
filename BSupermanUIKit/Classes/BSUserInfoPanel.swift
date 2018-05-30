@@ -143,21 +143,7 @@ public class BSUserInfoPanel: UIStackView {
                 
         titleLabel.text = theData.titleLabel
         
-//        let frameworkBundle = Bundle(for: BSUserInfoPanel.self)
-//        let bundleURL = frameworkBundle.resourceURL?.appendingPathComponent("BSupermanUIKit.bundle")
-//        let resourceBundle = Bundle(url: bundleURL!)
-//
-//        let placeholder = UIImage(named: "person_photo",
-//                                  in: resourceBundle,
-//                                  compatibleWith: nil)
-        
-        let placeholder = UIImage.LoadImageFromBundle(name: "person_photo")
-        
-        let url:URL = URL(string: theData.avatar) ?? URL(string:"https://")!
-        let request = ImageRequest(url: url)
-        let options = ImageLoadingOptions(placeholder: placeholder)
-        Nuke.loadImage(with: request, options: options, into: avatar)
-        
+        loadImageWithPlaceholder(with: theData.avatar, into: avatar)
         
         level.text = theData.level
         nickname.text = theData.nickname
@@ -166,7 +152,6 @@ public class BSUserInfoPanel: UIStackView {
         ratingA.text = theData.ratingA
         ratingB.text = theData.ratingB
         ratingC.text = theData.ratingC
-        
         
     }
     

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "722510E12C692253FE5F0C2200CC23FE"
+               BlueprintIdentifier = "0385E07F7D2080E67CAE45C0C603D3FD"
                BuildableName = "BSupermanUIKit.bundle"
                BlueprintName = "BSupermanUIKit-BSupermanUIKit"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "722510E12C692253FE5F0C2200CC23FE"
+            BlueprintIdentifier = "0385E07F7D2080E67CAE45C0C603D3FD"
             BuildableName = "BSupermanUIKit.bundle"
             BlueprintName = "BSupermanUIKit-BSupermanUIKit"
             ReferencedContainer = "container:Pods.xcodeproj">

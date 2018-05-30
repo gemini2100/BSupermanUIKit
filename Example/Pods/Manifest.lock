@@ -1,6 +1,6 @@
 PODS:
   - BSupermanFoundation (0.1.3)
-  - BSupermanUIKit (0.1.7):
+  - BSupermanUIKit (0.1.8):
     - BSupermanFoundation (~> 0.1.0)
     - Nuke
     - RxCocoa
@@ -30,7 +30,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   BSupermanFoundation: e45875db99e1caf9d1f9674ede0ca02dad5d7825
-  BSupermanUIKit: 9cac97230e9be07556ad0af5ae11afe49f329415
+  BSupermanUIKit: 4290371b7d4b2fb4f25dbdc8ad889c7b46ce261b
   Nuke: 922cb05945ed5c7980a3ad0bc9ae57fbbd12899f
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxSwift: e49536837d9901277638493ea537394d4b55f570

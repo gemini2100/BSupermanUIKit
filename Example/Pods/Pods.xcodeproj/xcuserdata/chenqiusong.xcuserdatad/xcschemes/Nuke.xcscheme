@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DDD55EF65F2B718FEF461D9B81F429A4"
+               BlueprintIdentifier = "B590F6232A4B5CCFDB8A8D499265B082"
                BlueprintName = "Nuke"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "Nuke.framework">
