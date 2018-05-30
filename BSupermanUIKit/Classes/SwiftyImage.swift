@@ -481,3 +481,17 @@ public extension UIImage {
     }
 }
 
+// MARK: - 从Bundle里面加载图片
+public extension UIImage {
+    
+    public class func LoadImageFromBundle(name: String) -> UIImage? {
+        let frameworkBundle = Bundle(for: BSUIKit.self)
+        let bundleURL = frameworkBundle.resourceURL?.appendingPathComponent("BSupermanUIKit.bundle")
+        let resourceBundle = Bundle(url: bundleURL!)
+        
+        return UIImage(named: name, in: resourceBundle, compatibleWith: nil)
+        }
+}
+    
+
+

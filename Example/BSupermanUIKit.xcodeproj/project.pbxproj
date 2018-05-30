@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4791E8BD20B961F8004E5F3B /* TaskDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4791E8BC20B961F8004E5F3B /* TaskDetailsViewController.swift */; };
 		47D8429120744AA300F9B296 /* TaskHometViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D8429020744AA300F9B296 /* TaskHometViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* LoginViewController.swift */; };
@@ -20,6 +21,7 @@
 		1CEFEB6956F42744AC0836D2 /* Pods-BSupermanUIKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSupermanUIKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BSupermanUIKit_Example/Pods-BSupermanUIKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		317B0053A7847C685B54A29A /* Pods-BSupermanUIKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSupermanUIKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BSupermanUIKit_Example/Pods-BSupermanUIKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		37B7DD7AFCFD50E2950968BB /* BSupermanUIKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BSupermanUIKit.podspec; path = ../BSupermanUIKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4791E8BC20B961F8004E5F3B /* TaskDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsViewController.swift; sourceTree = "<group>"; };
 		47D8429020744AA300F9B296 /* TaskHometViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskHometViewController.swift; sourceTree = "<group>"; };
 		5C31D0F60B88EA0B02DFAE47 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* BSupermanUIKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSupermanUIKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +70,7 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* LoginViewController.swift */,
 				47D8429020744AA300F9B296 /* TaskHometViewController.swift */,
+				4791E8BC20B961F8004E5F3B /* TaskDetailsViewController.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -123,7 +126,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				B92F7C9ED5C02C6881746B29 /* [CP] Embed Pods Frameworks */,
-				2F1E27B44224F9972912B6D1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,21 +203,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2F1E27B44224F9972912B6D1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BSupermanUIKit_Example/Pods-BSupermanUIKit_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B92F7C9ED5C02C6881746B29 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -223,19 +210,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BSupermanUIKit_Example/Pods-BSupermanUIKit_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BSupermanFoundation/BSupermanFoundation.framework",
 				"${BUILT_PRODUCTS_DIR}/BSupermanUIKit/BSupermanUIKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSupermanFoundation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSupermanUIKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -252,6 +241,7 @@
 				607FACD81AFB9204008FA782 /* LoginViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				47D8429120744AA300F9B296 /* TaskHometViewController.swift in Sources */,
+				4791E8BD20B961F8004E5F3B /* TaskDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

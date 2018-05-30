@@ -1,9 +1,10 @@
+
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/gemini2100/BSupermanSpecs.git'
+
 use_frameworks!
 
 target 'BSupermanUIKit_Example' do
   pod 'BSupermanUIKit', :path => '../'
-  pod 'SnapKit', '~> 4.0.0'
-  pod 'Then'
-  pod 'RxSwift'
-  pod 'RxCocoa'
+
 end

@@ -14,7 +14,7 @@ public class BSTextField: UITextField {
     {
         super.init(frame:frame)
         
-        layer.borderColor = BSThemeColor.BSInactiveGary.color.cgColor
+        layer.borderColor = BSThemeColor.BSInactiveGary_cccccc.color.cgColor
         layer.borderWidth = 1
         layer.cornerRadius = 5
         layer.masksToBounds = true
@@ -33,7 +33,7 @@ public class BSTextField: UITextField {
         let becomeFirstResponder = super.becomeFirstResponder()
         
         if becomeFirstResponder {
-            layer.borderColor = BSThemeColor.BSBlue.color.cgColor
+            layer.borderColor = BSThemeColor.BSBlue_5f97d8.color.cgColor
         }        
         return becomeFirstResponder
     }
@@ -42,7 +42,7 @@ public class BSTextField: UITextField {
         
         let resignFirstResponder = super.resignFirstResponder()
         if resignFirstResponder {
-            layer.borderColor = BSThemeColor.BSInactiveGary.color.cgColor
+            layer.borderColor = BSThemeColor.BSInactiveGary_cccccc.color.cgColor
         }
         return resignFirstResponder
     }

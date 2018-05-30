@@ -8,8 +8,8 @@
 
 import UIKit
 import BSupermanUIKit
+import BSupermanFoundation
 import SnapKit
-import Then
 
 class LoginViewController: UIViewController {
 
@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     let lbl_title = UILabel().then
     {
         $0.text = "急客超人"
-        $0.textColor = BSThemeColor.BSTitleBlue.color
+        $0.textColor = BSThemeColor.BSTitleBlue_3399ff.color
         $0.font = UIFont.systemFont(ofSize: 46)
         $0.textAlignment = .center
         //$0.backgroundColor = UIColor.yellow
@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
     let tx_username = BSTextField().then
     {
         $0.placeholder = "你的手机号码/用户ID"
-        $0.font = BSFont.BSContentTiny.font
+        $0.font = BSFont.BSTitle30.font
         //$0.backgroundColor = UIColor.green
 
     }
@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
     let tx_password = BSTextField().then
     {
         $0.placeholder = "请填写密码"
-        $0.font = BSFont.BSContentTiny.font
+        $0.font = BSFont.BSTitle30.font
         //$0.backgroundColor = UIColor.red
     }
  
@@ -46,8 +46,8 @@ class LoginViewController: UIViewController {
     {
         $0.setTitle("忘记密码?", for: .normal)
         $0.setTitleColor(UIColor.white, for: .normal)
-        $0.titleLabel?.font = BSFont.BSContentTiny.font
-        $0.setTitleColor(BSThemeColor.BSTextColorNormal.color, for: .normal)
+        $0.titleLabel?.font = BSFont.BSTitle30.font
+        $0.setTitleColor(BSThemeColor.BSTextColorNormal_666666.color, for: .normal)
         $0.contentHorizontalAlignment = .left
         
         //$0.backgroundColor = UIColor.black
@@ -57,8 +57,8 @@ class LoginViewController: UIViewController {
     {
         $0.setTitle("注册账号", for: .normal)
         $0.setTitleColor(UIColor.white, for: .normal)
-        $0.titleLabel?.font = BSFont.BSContentTiny.font
-        $0.setTitleColor(BSThemeColor.BSTextColorNormal.color, for: .normal)
+        $0.titleLabel?.font = BSFont.BSTitle30.font
+        $0.setTitleColor(BSThemeColor.BSTextColorNormal_666666.color, for: .normal)
         $0.contentHorizontalAlignment = .right
         
         //$0.backgroundColor = UIColor.brown

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BSupermanUIKit'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = 'A UIKit library for bsuperman.'
 
 # This description is used to generate tags and improve search results.
@@ -36,7 +36,17 @@ Pod::Spec.new do |s|
   #   'BSupermanUIKit' => ['BSupermanUIKit/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+ s.resource_bundles = {
+   'BSupermanUIKit' => ['BSupermanUIKit/*.xcassets']
+ }
+
+
    s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  
+   s.dependency 'SnapKit'
+   s.dependency 'RxSwift'
+   s.dependency 'RxCocoa'
+   s.dependency 'Nuke' 
+  s.dependency 'BSupermanFoundation', '~> 0.1.0'
+   
 end

@@ -1,6 +1,6 @@
 {
   "name": "BSupermanUIKit",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "summary": "A UIKit library for bsuperman.",
   "description": "A UIKit library for bsuperman project.example color,button,label....",
   "homepage": "https://github.com/gemini2100/BSupermanUIKit",
@@ -13,12 +13,34 @@
   },
   "source": {
     "git": "https://github.com/gemini2100/BSupermanUIKit.git",
-    "tag": "0.1.5"
+    "tag": "0.1.7"
   },
   "platforms": {
     "ios": "10.0"
   },
   "source_files": "BSupermanUIKit/Classes/**/*",
   "swift_version": "4.0",
-  "frameworks": "UIKit"
+  "resource_bundles": {
+    "BSupermanUIKit": [
+      "BSupermanUIKit/*.xcassets"
+    ]
+  },
+  "frameworks": "UIKit",
+  "dependencies": {
+    "SnapKit": [
+
+    ],
+    "RxSwift": [
+
+    ],
+    "RxCocoa": [
+
+    ],
+    "Nuke": [
+
+    ],
+    "BSupermanFoundation": [
+      "~> 0.1.0"
+    ]
+  }
 }

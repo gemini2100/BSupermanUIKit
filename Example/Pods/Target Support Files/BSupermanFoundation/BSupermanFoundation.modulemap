@@ -1,0 +1,6 @@
+framework module BSupermanFoundation {
+  umbrella header "BSupermanFoundation-umbrella.h"
+
+  export *
+  module * { export * }
+}

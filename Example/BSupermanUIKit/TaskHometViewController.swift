@@ -8,74 +8,184 @@
 
 import UIKit
 import BSupermanUIKit
+import BSupermanFoundation
 import SnapKit
-import Then
 import RxSwift
 import RxCocoa
 
 
 /// 我的任务首页
 class TaskHometViewController: UIViewController {
-        
- //       let disposeBag = DisposeBag()
-        
-//        lazy var tableView: UITableView = {
-//            let table = UITableView()
-//            table.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-//            return table
-//        }()
     
-    //        func addTableView() {
-    //            view.addSubview(tableView)
-    //            tableView.snp.makeConstraints { (make) in
-    //                make.left.top.bottom.right.equalToSuperview()
-    //            }
-    //        }
-    //
-    //        func bindTableView() {
-    //            // 1 初始化数据源
-    //            let items = Observable.just((0...30).map {"\($0)" })
-    //            // 2 绑定数据源到tableView
-    //            items.bind(to: tableView.rx.items(cellIdentifier: "Cell", cellType: UITableViewCell.self)){ (row, element, cell) in
-    //                cell.textLabel?.text = "\(element)"
-    //                }
-    //                .disposed(by: disposeBag)
-    //            // 3 设置点击事件
-    //            tableView.rx.modelSelected(String.self).subscribe(onNext: {
-    //                print("tap index: \($0)")
-    //            }).disposed(by: disposeBag)
-    //        }
+    var contentView = UIView(frame: CGRect.zero)
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
-  
+    let userInfoPanel = BSUIKit.createUserInfoPanel()
+    let testBtn = BSUIKit.createTaskStatusOrangeLabel(title: "任务状态:超人已接单")
+    
+    let testBtn2 = BSUIKit.createGreenButton(title: "联系超人")
+    
+    let testBtn3 = BSUIKit.createCheckBox()
+    let testBtn4 = BSUIKit.createRadioBox()
+    
+    
+    
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        
+        //setUIProperty()
+        //makeUIConstraints()
+        
+        //setNavProperty()
+        //makeNavConstraints()
+        //navbar.style = .BackTitle
+
+        //self.view.addSubview(testButton)
+        
+//        testButton.snp.makeConstraints{ (make) in
+//
+//            make.top.equalToSuperview().offset(60)
+//            make.width.equalTo(80)
+//            make.height.equalTo(50)
+//
+//        }
+        
+        view.addSubview(userInfoPanel)
+        view.addSubview(testBtn)
+        view.addSubview(testBtn2)
+        view.addSubview(testBtn3)
+        view.addSubview(testBtn4)
+        
+        let theData = (titleLabel:"超人信息",
+                           avatar:"https://superman-headimage.oss-cn-hangzhou.aliyuncs.com/8b74def4-eb0d-4780-a9e1-c1513f1baff0.jpg",
+                           level:"",
+                           nickname:"",
+                           signature:"",
+                           taskNumber:"",
+                           ratingA:"好评（0）",
+                           ratingB:"中评（0）",
+                           ratingC:"差评（0）"
+                           )
+        
+        userInfoPanel.setTheData(theData: theData)
+        userInfoPanel.snp.makeConstraints{ (make) in
+            
+            make.top.equalToSuperview().offset(100)
+            make.width.equalToSuperview()
+            
+            
+        }
+        
+                testBtn.snp.makeConstraints{ (make) in
+        
+                    make.top.equalToSuperview().offset(400)
+                    make.centerX.equalToSuperview()
+                    make.width.equalToSuperview().inset(10)
+                    make.height.equalTo(50)
+        
+                }
+        
+        testBtn2.snp.makeConstraints{ (make) in
+            
+            make.top.equalTo(testBtn.snp.bottom).offset(20)
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview().inset(10)
+            make.height.equalTo(50)
+            
+        }
+        
+        testBtn3.snp.makeConstraints{ (make) in
+            
+            make.top.equalTo(testBtn2.snp.bottom).offset(20)
+            make.left.equalTo(20)
+            make.width.height.equalTo(20)
+            
+            
+        }
+        
+        testBtn4.snp.makeConstraints{ (make) in
+            
+            make.top.equalTo(testBtn2.snp.bottom).offset(20)
+            make.left.equalTo(testBtn3.snp.right).offset(20)
+            make.width.height.equalTo(20)
+            
+        }
+        
+        
+    }
+    
+    func setNavProperty()
+    {
+        self.view.addSubview(statusbar)
+        self.view.addSubview(navbar)
+        
+//        navbar.leftTaps
+//        .subscribe(onNext: { print("touch me")})
+
+        
+    }
+
+    func makeNavConstraints()
+    {
+        statusbar.snp.makeConstraints { (make) -> Void in
+
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.height.equalTo(BSStatusBar.statusBarHeight)
+           
+        }
+
+        navbar.snp.makeConstraints { (make) -> Void in
+
+            make.top.equalTo(statusbar.snp.bottom)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.height.equalTo(BSNavigationBar.navBarHeight)
+        }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if #available(iOS 11.0, *)
+        {
+            print("Origin SafeAreaInsets :" + "\(self.view.safeAreaInsets)")
+        }
+        //self.additionalSafeAreaInsets = UIEdgeInsetsMake(5, 5, 5, 5)
+        //print("view controller's additionalSafeAreaInsets set to " + "\(self.additionalSafeAreaInsets)")
+        //print("Adjusted  SafeAreaInsets :" + "\(self.view.safeAreaInsets)")
+    }
+
+    
+    
+    /// Start---Test Button Code
+   
     @objc private func sayAction(_ sender: UIButton?) {
         taskLabel.text = "帮忙跑腿帮忙跑腿帮忙跑腿帮忙跑腿帮忙跑腿"
         taskPublishTime.text = "帮忙跑腿帮忙跑腿帮忙跑腿帮忙跑腿帮忙跑腿"
-        
+        taskContent.text = "帮忙跑腿帮忙跑帮忙帮忙腿帮忙跑腿帮忙跑腿帮忙跑腿"
     }
-    override func viewDidLoad() {
-            super.viewDidLoad()
-            //addTableView()
-            //bindTableView()
-        
-        testButton.setTitle("btn", for: .normal)  //set button title
-        testButton.setTitleColor(UIColor.red, for: .normal) //set button title color
-        testButton.backgroundColor = UIColor.black //set button background color
-        testButton.addTarget(self, action: #selector(sayAction(_:)), for: .touchUpInside)
+    
+//    lazy var testButton = UIButton(frame: CGRect(x: 0, y: 100, width: 100, height: 50)).then{
+//        $0.setTitle("btn", for: .normal)  //set button title
+//        $0.setTitleColor(UIColor.red, for: .normal) //set button title color
+//        $0.backgroundColor = UIColor.black //set button background color
+//        $0.addTarget(self, action: #selector(sayAction(_:)), for: .touchUpInside)
+//    }
+    
+    
+    lazy var testButton = BSUIKit.createGrayButton(title: "任务编号")
+    
+   /// End---Test Button Code
+    
+    var navbar = BSNavigationBar(frame: CGRect.zero)
+    var statusbar = BSStatusBar(frame: CGRect.zero)
 
-        testButton.backgroundColor = UIColor.black
-        
-         self.view.addSubview(testButton)
-        
-        
-            setUIProperty()
-            makeUIConstraints()
-    }
-    
-    var contentView = UIView(frame: CGRect.zero)
-    var testButton = UIButton(frame: CGRect(x: 0, y: 30, width: 100, height: 50))
-   
-    
-    
     var head = UIImageView()
     var level = UILabel()
     
@@ -100,9 +210,7 @@ class TaskHometViewController: UIViewController {
     
     var divLine2 = UIImageView()                 //底部分割线
     
-    fileprivate func setUIProperty() {
-        
-        self.view.backgroundColor = UIColor("EDECF2")
+    fileprivate func setUIProperty() {        
         
         contentView.do{
             $0.backgroundColor = UIColor.white
@@ -122,8 +230,8 @@ class TaskHometViewController: UIViewController {
         }
         //用户等级
         level.do{
-            $0.font = BSFont.BSSubTiny.font
-            $0.textColor = BSThemeColor.BSYellow.color
+            $0.font = BSFont.BSSubTiny20.font
+            $0.textColor = BSThemeColor.BSYellow_eaa41f.color
             $0.textAlignment = .center
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
@@ -134,8 +242,8 @@ class TaskHometViewController: UIViewController {
         
         //标题
         taskLabel.do{
-            $0.font = BSFont.BSTitleTiny.font
-            $0.textColor = BSThemeColor.BSTextColorTitle.color
+            $0.font = BSFont.BSTitle30.font
+            $0.textColor = BSThemeColor.BSTextColorTitle_333333.color
             $0.textAlignment = .left
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
@@ -155,8 +263,8 @@ class TaskHometViewController: UIViewController {
         }
         //发布时间
         taskPublishTime.do{
-            $0.font = BSFont.BSSubTiny.font
-            $0.textColor = BSThemeColor.BSTextColorTiny.color
+            $0.font = BSFont.BSSubTiny20.font
+            $0.textColor = BSThemeColor.BSTextColorTiny_999999.color
             $0.textAlignment = .left
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
@@ -170,14 +278,14 @@ class TaskHometViewController: UIViewController {
         
         //任务摘要
         taskContent.do{
-            $0.font = BSFont.BSContentTiny.font
-            $0.textColor = BSThemeColor.BSTextColorTiny.color
+            $0.font = BSFont.BSContent24.font
+            $0.textColor = BSThemeColor.BSTextColorTiny_999999.color
             $0.textAlignment = .left
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
             
             //test
-            $0.text = "我需要一份牛肉面，微微辣就可以，千万不要加太多的水，水多了太淡了"
+            $0.text = "我需要一份牛肉面"//，微微辣就可以，千万不要加太多的水，水多了太淡了"
             //$0.backgroundColor = UIColor.cyan
             
         }
@@ -192,7 +300,7 @@ class TaskHometViewController: UIViewController {
         //分割线
         divLine.do{
             $0.image = UIImage.size(width: 1 , height: 1)
-                .color(BSThemeColor.BSDivLineColorLight.color)
+                .color(BSThemeColor.BSDivLineColorLight_f5f5f5.color)
                 .image
             $0.contentMode = .scaleToFill
             self.contentView.addSubview($0)
@@ -201,8 +309,8 @@ class TaskHometViewController: UIViewController {
         //服务费标题
         taskServiceCountLabel.do{
             $0.text = NSLocalizedString("服务费", comment: "")
-            $0.font = BSFont.BSSubTiny.font
-            $0.textColor = BSThemeColor.BSTextColorTiny.color
+            $0.font = BSFont.BSSubTiny20.font
+            $0.textColor = BSThemeColor.BSTextColorTiny_999999.color
             $0.textAlignment = .left
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
@@ -212,8 +320,8 @@ class TaskHometViewController: UIViewController {
         }
         //服务费
         taskServiceCount.do{
-            $0.font = BSFont.BSSub.font
-            $0.textColor = BSThemeColor.BSYellow.color
+            $0.font = BSFont.BSSubTiny20.font
+            $0.textColor = BSThemeColor.BSYellow_eaa41f.color
             $0.textAlignment = .left
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
@@ -225,8 +333,8 @@ class TaskHometViewController: UIViewController {
         //加号
         plusLabel.do{
             $0.text = NSLocalizedString("+", comment: "")
-            $0.font = BSFont.BSSubTiny.font
-            $0.textColor = BSThemeColor.BSTextColorTiny.color
+            $0.font = BSFont.BSSubTiny20.font
+            $0.textColor = BSThemeColor.BSTextColorTiny_999999.color
             $0.textAlignment = .left
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
@@ -237,8 +345,8 @@ class TaskHometViewController: UIViewController {
         //小费标题
         taskFeeLabel.do{
             $0.text = NSLocalizedString("小费", comment: "")
-            $0.font = BSFont.BSSubTiny.font
-            $0.textColor = BSThemeColor.BSTextColorTiny.color
+            $0.font = BSFont.BSSubTiny20.font
+            $0.textColor = BSThemeColor.BSTextColorTiny_999999.color
             $0.textAlignment = .left
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
@@ -248,8 +356,8 @@ class TaskHometViewController: UIViewController {
         }
         //小费
         taskFee.do{
-            $0.font = BSFont.BSSub.font
-            $0.textColor = BSThemeColor.BSYellow.color
+            $0.font = BSFont.BSSubTiny20.font
+            $0.textColor = BSThemeColor.BSYellow_eaa41f.color
             $0.textAlignment = .left
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
@@ -263,34 +371,34 @@ class TaskHometViewController: UIViewController {
         //任务状态标签
         taskStatusLabel.do{
             $0.text = NSLocalizedString("任务状态", comment: "")
-            $0.font = BSFont.BSSubTiny.font
-            $0.textColor = BSThemeColor.BSWhite.color
+            $0.font = BSFont.BSSubTiny20.font
+            $0.textColor = BSThemeColor.BSWhite_ffffff.color
             $0.textAlignment = .left
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
             
             //test
-            $0.backgroundColor = BSThemeColor.BSBlue.color
+            $0.backgroundColor = BSThemeColor.BSBlue_5f97d8.color
             
         }
         //任务状态
         taskStatus.do{
-            $0.textColor = BSThemeColor.BSTextColorNormal.color
-            $0.font = BSFont.BSSubTiny.font
+            $0.textColor = BSThemeColor.BSTextColorNormal_666666.color
+            $0.font = BSFont.BSSubTiny20.font
             $0.textAlignment = .center
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
             
             //test
             $0.text = "已发布"
-            $0.backgroundColor = BSThemeColor.BSDivLineColorLight.color
+            $0.backgroundColor = BSThemeColor.BSDivLineColorLight_f5f5f5.color
             
         }
         
         //分割线
         divLine2.do{
             $0.image = UIImage.size(width: 1 , height: 1)
-                .color(BSThemeColor.BSDivLineColorMid.color)
+                .color(BSThemeColor.BSDivLineColorMid_e7e7e7.color)
                 .image
             $0.contentMode = .scaleToFill
             self.contentView.addSubview($0)
@@ -305,7 +413,7 @@ class TaskHometViewController: UIViewController {
     let taskStatusSize = 100 //具体任务状态的最小宽度
     
     let contentViewMargin = 10 //左右两边留白
-    let contentMinSzie = 10 //标题和摘要最小大小
+    let contentMinSzie = 100 //标题和摘要最小大小
     let HeadMargin = 10 //右边内容和头像的边距
     let levelMargin = 4 //等级和头像上边距
     let FeeMargin = 4 //费用间距
@@ -371,13 +479,13 @@ class TaskHometViewController: UIViewController {
             make.trailing.equalTo(taskContentIcon.snp.leading)
             make.top.equalTo(taskContentIcon)
         }
-        taskContent.setContentCompressionResistancePriority(.fittingSizeLevel, for: .horizontal)//设置可以压缩
+        taskContent.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)//设置可以压缩
 
         //任务右箭头
         taskContentIcon.snp.makeConstraints { (make) -> Void in
             make.height.equalTo(ContentLineHeight)
             make.top.equalTo(taskPublishTime.snp.bottom)
-            make.trailing.equalToSuperview().inset(contentViewMargin)
+            make.trailing.equalToSuperview().inset(contentViewMargin).priority(.high)
             
         }
         
