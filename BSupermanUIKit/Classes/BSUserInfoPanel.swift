@@ -167,6 +167,7 @@ public class BSUserInfoPanel: UIStackView {
         ratingB.text = theData.ratingB
         ratingC.text = theData.ratingC
         
+        
     }
     
 }
@@ -239,13 +240,14 @@ extension BSUserInfoPanel{
             
         
         //左边信息
-//        let placeholder = UIImage(named: "person_photo",
-//                                in: resourceBundle,
-//                                compatibleWith: nil)
-//        let url:URL = URL(string: theData.avatar) ?? URL(string:"https://")!
-//        let request = ImageRequest(url: url)
-//        let options = ImageLoadingOptions(placeholder: placeholder)
-//        Nuke.loadImage(with: request, options: options, into: avatar)
+        avatar.contentMode = .scaleAspectFill
+        //设置遮罩
+        avatar.layer.masksToBounds = true
+        //设置圆角半径(宽度的一半)，显示成圆形
+        avatar.layer.cornerRadius = AvatarIconWidth / 2
+        //设置边框
+        avatar.layer.borderColor = BSThemeColor.BSDivLineColorDark_cccccc.color.cgColor
+        avatar.layer.borderWidth = 2.0
  
         
         level.textColor = BSThemeColor.BSTextColorTiny_999999.color
@@ -258,13 +260,13 @@ extension BSUserInfoPanel{
         nickname.textColor = BSThemeColor.BSTextColor_373a3d.color
         nickname.font = BSFont.BSContent22.font
         nickname.textAlignment = .left
-        //nickname.text = theData.nickname
+        //nickname.backgroundColor = UIColor.green
         
         signature.textColor = BSThemeColor.BSTextColorTiny_999999.color
         signature.font = BSFont.BSContent22.font
         signature.textAlignment = .left
-        //signature.text = theData.signature
-                signature.setContentCompressionResistancePriority(.fittingSizeLevel, for: .horizontal)
+        //signature.backgroundColor = UIColor.red
+        signature.setContentCompressionResistancePriority(.fittingSizeLevel, for: .horizontal)
         
         taskNumberLabel.textColor = BSThemeColor.BSTextColor_373a3d.color
         taskNumberLabel.font = BSFont.BSSubTiny20.font
@@ -274,7 +276,6 @@ extension BSUserInfoPanel{
         taskNumber.textColor = BSThemeColor.BSTextColor_373a3d.color
         taskNumber.font = BSFont.BSSubTiny20.font
         taskNumber.textAlignment = .left
-        //taskNumber.text = theData.taskNumber
         taskNumber.setContentCompressionResistancePriority(.fittingSizeLevel, for: .horizontal)
         
         //ratingLabel
@@ -315,5 +316,6 @@ extension BSUserInfoPanel{
         divLine2.snp.makeConstraints { (make) -> Void in
             make.height.equalTo(DivLineHight)
         }
+        
     }
 }

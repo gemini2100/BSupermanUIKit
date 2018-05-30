@@ -62,11 +62,11 @@ class TaskHometViewController: UIViewController {
         
         let theData = (titleLabel:"超人信息",
                            avatar:"https://superman-headimage.oss-cn-hangzhou.aliyuncs.com/8b74def4-eb0d-4780-a9e1-c1513f1baff0.jpg",
-                           level:"",
-                           nickname:"",
-                           signature:"",
-                           taskNumber:"",
-                           ratingA:"好评（0）",
+                           level:"Lv1",
+                           nickname:"陈秋松",
+                           signature:"我们不一样我们不一样我们不一样我们不一样",
+                           taskNumber:"10",
+                           ratingA:"好评（10）",
                            ratingB:"中评（0）",
                            ratingC:"差评（0）"
                            )
