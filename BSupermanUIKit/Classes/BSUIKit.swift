@@ -202,4 +202,15 @@ public class BSUIKit{
     {
         return BSUserInfoPanel(frame: CGRect.zero)
     }
+    
+    static public func createDivBlock() -> UIView
+    {
+        let ret = UIView(frame: CGRect.zero)
+        
+        ret.backgroundColor = BSThemeColor.BSDivLineColorLight_f5f5f5.color
+        ret.layer.borderColor = BSThemeColor.BSDivLineColorDark_cccccc.color.cgColor
+        ret.layer.borderWidth = 1.0
+        
+        return ret
+    }
 }
