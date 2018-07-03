@@ -252,6 +252,7 @@ extension BSUserInfoPanel{
         signature.textAlignment = .left
         //signature.backgroundColor = UIColor.red
         signature.setContentCompressionResistancePriority(.fittingSizeLevel, for: .horizontal)
+        signature.setContentHuggingPriority(.fittingSizeLevel, for: .horizontal)
         
         taskNumberLabel.textColor = BSThemeColor.BSTextColor_373a3d.color
         taskNumberLabel.font = BSFont.BSSubTiny20.font
@@ -262,6 +263,7 @@ extension BSUserInfoPanel{
         taskNumber.font = BSFont.BSSubTiny20.font
         taskNumber.textAlignment = .left
         taskNumber.setContentCompressionResistancePriority(.fittingSizeLevel, for: .horizontal)
+        taskNumber.setContentHuggingPriority(.fittingSizeLevel, for: .horizontal)
         
         //ratingLabel
         ratingA.textColor = BSThemeColor.BSRed_ea1f32.color

@@ -26,7 +26,7 @@ public class BSUIKit{
         button.setTitleColor(BSThemeColor.BSWhite_ffffff.color, for: .normal)
         button.titleLabel?.font = BSFont.BSTitle30.font
         button.setBackgroundImage(UIImage(color:BSThemeColor.BSRed_ea1f32.color), for: .normal)
-        button.setBackgroundImage(UIImage(color:BSThemeColor.BSYellow_eaa41f.color), for: .highlighted)
+        button.setBackgroundImage(UIImage(color:BSThemeColor.BSDivLineColorMid_e7e7e7.color), for: .highlighted)
         button.setBackgroundImage(UIImage(color:BSThemeColor.BSInactiveGary_cccccc.color), for: .disabled)
         button.layer.cornerRadius = 4
         button.layer.masksToBounds = true
@@ -40,7 +40,7 @@ public class BSUIKit{
         button.setTitleColor(BSThemeColor.BSWhite_ffffff.color, for: .normal)
         button.titleLabel?.font = BSFont.BSTitle30.font
         button.setBackgroundImage(UIImage(color:BSThemeColor.BSBlue_5f97d8.color), for: .normal)
-        button.setBackgroundImage(UIImage(color:BSThemeColor.BSYellow_eaa41f.color), for: .highlighted)
+        button.setBackgroundImage(UIImage(color:BSThemeColor.BSDivLineColorMid_e7e7e7.color), for: .highlighted)
         button.setBackgroundImage(UIImage(color:BSThemeColor.BSInactiveGary_cccccc.color), for: .disabled)
         button.layer.cornerRadius = 4
         button.layer.masksToBounds = true
@@ -54,8 +54,8 @@ public class BSUIKit{
         button.setTitleColor(BSThemeColor.BSWhite_ffffff.color, for: .normal)
         button.titleLabel?.font = BSFont.BSTitle30.font
         button.setBackgroundImage(UIImage(color:BSThemeColor.BSGreen_60a75b.color), for: .normal)
-        button.setBackgroundImage(UIImage(color:BSThemeColor.BSYellow_eaa41f.color), for: .selected)
-        button.setBackgroundImage(UIImage(color:BSThemeColor.BSInactiveGary_cccccc.color), for: .highlighted)
+        button.setBackgroundImage(UIImage(color:BSThemeColor.BSDivLineColorMid_e7e7e7.color), for: .highlighted)
+        button.setBackgroundImage(UIImage(color:BSThemeColor.BSInactiveGary_cccccc.color), for: .disabled)
         button.layer.cornerRadius = 4
         button.layer.masksToBounds = true
         return button
