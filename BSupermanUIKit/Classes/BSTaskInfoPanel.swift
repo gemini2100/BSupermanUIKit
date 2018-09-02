@@ -12,7 +12,7 @@ import SnapKit
 //行高间隙
 fileprivate let LineMargin:CGFloat = 8  //行距
 fileprivate let DivLineHight:CGFloat = 1  //分割线高度
-fileprivate let LableWidth:CGFloat = 100  //标题Label的宽度
+fileprivate let LableWidth:CGFloat = 80  //标题Label的宽度
 fileprivate let TitleIconWidth:CGFloat = 20  //标题Label的宽度
 fileprivate let EleButtonHight:CGFloat = 80  //电子协议的按钮高度
 fileprivate let TitleString = ["任务编号:","区域范围:","任务标签:","任务描述:","接单条件:","约定地点:","任务时效:","支付方式:","服务费:","小费:","超人垫付:"] //固定的标题字符
@@ -112,8 +112,8 @@ extension BSTaskInfoPanel
         let titleIcon = UIImageView(image: iconImage)
         let titleLabel = UILabel(frame: CGRect.zero)
         titleLabel.text = "任务信息"
-        titleLabel.textColor = BSThemeColor.BSTitleBlue_3399ff.color
-        titleLabel.font = BSFont.BSContent24.font
+        titleLabel.textColor = BSThemeColor.BSColor4.color
+        titleLabel.font = BSFont.BSTitle32.font
         titleLabel.setContentCompressionResistancePriority(.fittingSizeLevel, for: .horizontal)
         
         titleStackView.addArrangedSubview(titleIcon)
@@ -141,7 +141,7 @@ extension BSTaskInfoPanel
         
         //顶端分割线
         let divLine = UIView(frame: CGRect.zero)
-        divLine.backgroundColor = BSThemeColor.BSDivLineColorMid_e7e7e7.color
+        divLine.backgroundColor = BSThemeColor.BSColorL2.color
         
         let eleButton = BSUIKit.createGrayButton(title: "查看电子协议内容")
         
@@ -260,15 +260,15 @@ extension TaskInfoCell
         self.isLayoutMarginsRelativeArrangement = true
         
         //顶端分割线
-        divLine.backgroundColor = BSThemeColor.BSDivLineColorMid_e7e7e7.color
+        divLine.backgroundColor = BSThemeColor.BSColorL2.color
         
         //标题和内容
-        titleLabel.textColor = BSThemeColor.BSTextColorTiny_999999.color
-        titleLabel.font = BSFont.BSContent24.font
+        titleLabel.textColor = BSThemeColor.BSColor3.color
+        titleLabel.font = BSFont.BSTitle32.font
         titleLabel.textAlignment = .left
         
-        contentLabel.textColor = BSThemeColor.BSTextColor_373a3d.color
-        contentLabel.font = BSFont.BSContent26.font
+        contentLabel.textColor = BSThemeColor.BSColor1.color
+        contentLabel.font = BSFont.BSTitle30.font
         contentLabel.textAlignment = .left
         contentLabel.numberOfLines = 0
         

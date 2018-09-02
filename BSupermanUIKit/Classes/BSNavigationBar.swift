@@ -54,7 +54,7 @@ public class BSNavigationBar: UIView {
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = BSThemeColor.BSTitleBlue_3399ff.color
+        backgroundColor = BSThemeColor.BSColor4.color
 
         self.addSubview(leftButton)
         self.addSubview(titleLabel)
@@ -91,7 +91,7 @@ public class BSNavigationBar: UIView {
 
 
                 titleLabel.text = "急客超人"
-                titleLabel.textColor = BSThemeColor.BSWhite_ffffff.color
+                titleLabel.textColor = BSThemeColor.BSColor0.color
                 titleLabel.font = BSFont.BSTitle30.font
                 titleLabel.textAlignment = .center
 

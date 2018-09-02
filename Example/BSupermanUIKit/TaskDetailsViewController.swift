@@ -73,7 +73,7 @@ class TaskDetailsViewController: UIViewController {
         view.addSubview(scrollView)
         scrollView.addSubview(theCoView)
         theCoView.addSubview(taskInfoPanel)
-        theCoView.backgroundColor = BSThemeColor.BSWhite_ffffff.color //for test
+        theCoView.backgroundColor = BSThemeColor.BSColor0.color //for test
         
     }
 

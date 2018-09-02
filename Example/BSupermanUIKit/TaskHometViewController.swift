@@ -31,55 +31,186 @@ class TaskHometViewController: UIViewController {
     let testBtn3 = BSUIKit.createCheckBox()
     let testBtn4 = BSUIKit.createRadioBox()
     
+//    let test1 = BSUIKit.createTaskStatusRedLabel(title: "测试1",fontSize:13)// 24
+//    let test2 = BSUIKit.createTaskStatusRedLabel(title: "测试1",fontSize:15)
+//    let test3 = BSUIKit.createTaskStatusRedLabel(title: "测试1",fontSize:17)
+//    let test4 = BSUIKit.createTaskStatusRedLabel(title: "测试1",fontSize:19)
+   
+//    let statusBtn1 = BSUIKit.createTaskStatusOrangeLabel(title: "任务状态:超人已接单")
+//    let statusBtn2 = BSUIKit.createTaskStatusRedLabel(title: "任务状态:超人已接单")
+//    let statusBtn3 = BSUIKit.createTaskStatusGrayLabel(title: "任务状态:超人已接单")
+//    let statusBtn4 = BSUIKit.createTaskStatusGreenLabel(title: "任务状态:超人已接单")
+//    let statusBtn5 = BSUIKit.createTaskStatusBlueLabel(title: "任务状态:超人已接单")
+//
+//    let button1 = BSUIKit.createGrayButton(title: "查看电子协议内容")
+//    let button2 = BSUIKit.createGreenButton(title: "绿色按钮")
+//    let button3 = BSUIKit.createBlueButton(title: "蓝色按钮")
+//    let button4 = BSUIKit.createRedButton(title: "红色按钮")
+//    let button5 = BSUIKit.createTransitionButton(title: "登录按钮")
+    
+    
+    
     
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        //setUIProperty()
-        //makeUIConstraints()
-        
-        //setNavProperty()
-        //makeNavConstraints()
-        //navbar.style = .BackTitle
 
-        //self.view.addSubview(testButton)
+//        view.addSubview(statusBtn1)
+//        view.addSubview(statusBtn2)
+//        view.addSubview(statusBtn3)
+//        view.addSubview(statusBtn4)
+//        view.addSubview(statusBtn5)
         
-//        testButton.snp.makeConstraints{ (make) in
+//        view.addSubview(button1)
+//        view.addSubview(button2)
+//        view.addSubview(button3)
+//        view.addSubview(button4)
+//        view.addSubview(button5)
 //
-//            make.top.equalToSuperview().offset(60)
-//            make.width.equalTo(80)
-//            make.height.equalTo(50)
+//        statusBtn1.snp.makeConstraints{ (make) in
+//            make.top.equalToSuperview().offset(20)
+//            make.centerX.equalToSuperview()
+//            make.leading.equalToSuperview().offset(10)
+//            make.trailing.equalToSuperview().inset(10)
+//            make.height.equalTo(36)
+//        }
 //
+//
+//        statusBtn2.snp.makeConstraints{ (make) in
+//            make.top.equalTo(statusBtn1.snp.bottom).offset(20)
+//            make.centerX.equalToSuperview()
+//            make.leading.equalToSuperview().offset(10)
+//            make.trailing.equalToSuperview().inset(10)
+//            make.height.equalTo(36)
+//        }
+//
+//        statusBtn3.snp.makeConstraints{ (make) in
+//            make.top.equalTo(statusBtn2.snp.bottom).offset(20)
+//            make.centerX.equalToSuperview()
+//            make.leading.equalToSuperview().offset(10)
+//            make.trailing.equalToSuperview().inset(10)
+//            make.height.equalTo(36)
+//        }
+//
+//        statusBtn4.snp.makeConstraints{ (make) in
+//            make.top.equalTo(statusBtn3.snp.bottom).offset(20)
+//            make.centerX.equalToSuperview()
+//            make.leading.equalToSuperview().offset(10)
+//            make.trailing.equalToSuperview().inset(10)
+//            make.height.equalTo(36)
+//        }
+//
+//        statusBtn5.snp.makeConstraints{ (make) in
+//            make.top.equalTo(statusBtn4.snp.bottom).offset(20)
+//            make.centerX.equalToSuperview()
+//            make.leading.equalToSuperview().offset(10)
+//            make.trailing.equalToSuperview().inset(10)
+//            make.height.equalTo(36)
 //        }
         
-        view.addSubview(userInfoPanel)
-        view.addSubview(testBtn)
-        view.addSubview(testBtn2)
-        view.addSubview(testBtn3)
-        view.addSubview(testBtn4)
+//        button1.snp.makeConstraints{ (make) in
+//            make.top.equalToSuperview().offset(10)
+//            make.centerX.equalToSuperview()
+//            make.leading.equalToSuperview().offset(10)
+//            make.trailing.equalToSuperview().inset(10)
+//            make.height.equalTo(36)
+//        }
+//
+//        button2.snp.makeConstraints{ (make) in
+//            make.top.equalTo(button1.snp.bottom).offset(10)
+//            make.centerX.equalToSuperview()
+//            make.leading.equalToSuperview().offset(10)
+//            make.trailing.equalToSuperview().inset(10)
+//            make.height.equalTo(36)
+//        }
+//
+//        button3.snp.makeConstraints{ (make) in
+//            make.top.equalTo(button2.snp.bottom).offset(10)
+//            make.centerX.equalToSuperview()
+//            make.leading.equalToSuperview().offset(10)
+//            make.trailing.equalToSuperview().inset(10)
+//            make.height.equalTo(36)
+//        }
+//
+//        button4.snp.makeConstraints{ (make) in
+//            make.top.equalTo(button3.snp.bottom).offset(10)
+//            make.centerX.equalToSuperview()
+//            make.leading.equalToSuperview().offset(10)
+//            make.trailing.equalToSuperview().inset(10)
+//            make.height.equalTo(36)
+//        }
+//
+//        button5.snp.makeConstraints{ (make) in
+//            make.top.equalTo(button4.snp.bottom).offset(10)
+//            make.centerX.equalToSuperview()
+//            make.leading.equalToSuperview().offset(10)
+//            make.trailing.equalToSuperview().inset(10)
+//            make.height.equalTo(36)
+//        }
         
-        let theData = (titleLabel:"jike人信息",
-                           avatar:"https://superman-headimage.oss-cn-hangzhou.aliyuncs.com/8b74def4-eb0d-4780-a9e1-c1513f1baff0.jpg",
-                           level:"Lv1",
-                           nickname:"陈秋松",
-                           signature:"我",
-                           taskNumber:"10",
-                           ratingA:"好评（10）",
-                           ratingB:"中评（0）",
-                           ratingC:"差评（0）"
-                           )
+//        view.addSubview(userInfoPanel)
+//        view.addSubview(testBtn)
+//        view.addSubview(testBtn2)
+//        view.addSubview(testBtn3)
+//        view.addSubview(testBtn4)
         
-        userInfoPanel.setTheData(theData: theData)
-        userInfoPanel.snp.makeConstraints{ (make) in
-            
-            make.top.equalToSuperview().offset(100)
-            make.width.equalToSuperview()
-            
-            
+        /*
+        view.addSubview(test1)
+        view.addSubview(test2)
+        view.addSubview(test3)
+        view.addSubview(test4)
+        
+        test1.snp.makeConstraints{ (make) in
+            make.top.equalToSuperview().offset(20)
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview().inset(100)
+            make.height.equalTo(30)
         }
         
+        
+        test2.snp.makeConstraints{ (make) in
+            make.top.equalTo(test1.snp.bottom).offset(20)
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview().inset(100)
+            make.height.equalTo(30)
+        }
+        
+        test3.snp.makeConstraints{ (make) in
+            make.top.equalTo(test2.snp.bottom).offset(20)
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview().inset(100)
+            make.height.equalTo(30)
+        }
+        
+        test4.snp.makeConstraints{ (make) in
+            make.top.equalTo(test3.snp.bottom).offset(20)
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview().inset(100)
+            make.height.equalTo(30)
+        }*/
+        
+       
+//        let theData = (titleLabel:"超人信息",
+//                           avatar:"https://superman-headimage.oss-cn-hangzhou.aliyuncs.com/8b74def4-eb0d-4780-a9e1-c1513f1baff0.jpg",
+//                           level:"Lv1",
+//                           nickname:"陈秋松",
+//                           signature:"我是个性签名",
+//                           taskNumber:"10",
+//                           ratingA:"好评（10）",
+//                           ratingB:"中评（0）",
+//                           ratingC:"差评（0）"
+//                           )
+//
+//        userInfoPanel.setTheData(theData: theData)
+//        userInfoPanel.snp.makeConstraints{ (make) in
+//
+//            make.top.equalToSuperview().offset(100)
+//            make.width.equalToSuperview()
+//
+//
+//        }
+         /*
                 testBtn.snp.makeConstraints{ (make) in
         
                     make.top.equalToSuperview().offset(400)
@@ -115,7 +246,7 @@ class TaskHometViewController: UIViewController {
             
         }
         
-        
+        */
     }
     
     func setNavProperty()
@@ -230,8 +361,8 @@ class TaskHometViewController: UIViewController {
         }
         //用户等级
         level.do{
-            $0.font = BSFont.BSSubTiny20.font
-            $0.textColor = BSThemeColor.BSYellow_eaa41f.color
+            $0.font = BSFont.BSContent22.font
+            $0.textColor = BSThemeColor.BSColor7.color
             $0.textAlignment = .center
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
@@ -243,7 +374,7 @@ class TaskHometViewController: UIViewController {
         //标题
         taskLabel.do{
             $0.font = BSFont.BSTitle30.font
-            $0.textColor = BSThemeColor.BSTextColorTitle_333333.color
+            $0.textColor = BSThemeColor.BSColor1.color
             $0.textAlignment = .left
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
@@ -263,8 +394,8 @@ class TaskHometViewController: UIViewController {
         }
         //发布时间
         taskPublishTime.do{
-            $0.font = BSFont.BSSubTiny20.font
-            $0.textColor = BSThemeColor.BSTextColorTiny_999999.color
+            $0.font = BSFont.BSContent22.font
+            $0.textColor = BSThemeColor.BSColor3.color
             $0.textAlignment = .left
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
@@ -279,7 +410,7 @@ class TaskHometViewController: UIViewController {
         //任务摘要
         taskContent.do{
             $0.font = BSFont.BSContent24.font
-            $0.textColor = BSThemeColor.BSTextColorTiny_999999.color
+            $0.textColor = BSThemeColor.BSColor3.color
             $0.textAlignment = .left
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
@@ -300,7 +431,7 @@ class TaskHometViewController: UIViewController {
         //分割线
         divLine.do{
             $0.image = UIImage.size(width: 1 , height: 1)
-                .color(BSThemeColor.BSDivLineColorLight_f5f5f5.color)
+                .color(BSThemeColor.BSColorL3.color)
                 .image
             $0.contentMode = .scaleToFill
             self.contentView.addSubview($0)
@@ -309,8 +440,8 @@ class TaskHometViewController: UIViewController {
         //服务费标题
         taskServiceCountLabel.do{
             $0.text = NSLocalizedString("服务费", comment: "")
-            $0.font = BSFont.BSSubTiny20.font
-            $0.textColor = BSThemeColor.BSTextColorTiny_999999.color
+            $0.font = BSFont.BSContent22.font
+            $0.textColor = BSThemeColor.BSColor3.color
             $0.textAlignment = .left
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
@@ -320,8 +451,8 @@ class TaskHometViewController: UIViewController {
         }
         //服务费
         taskServiceCount.do{
-            $0.font = BSFont.BSSubTiny20.font
-            $0.textColor = BSThemeColor.BSYellow_eaa41f.color
+            $0.font = BSFont.BSContent22.font
+            $0.textColor = BSThemeColor.BSColor7.color
             $0.textAlignment = .left
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
@@ -333,8 +464,8 @@ class TaskHometViewController: UIViewController {
         //加号
         plusLabel.do{
             $0.text = NSLocalizedString("+", comment: "")
-            $0.font = BSFont.BSSubTiny20.font
-            $0.textColor = BSThemeColor.BSTextColorTiny_999999.color
+            $0.font = BSFont.BSContent22.font
+            $0.textColor = BSThemeColor.BSColor3.color
             $0.textAlignment = .left
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
@@ -345,8 +476,8 @@ class TaskHometViewController: UIViewController {
         //小费标题
         taskFeeLabel.do{
             $0.text = NSLocalizedString("小费", comment: "")
-            $0.font = BSFont.BSSubTiny20.font
-            $0.textColor = BSThemeColor.BSTextColorTiny_999999.color
+            $0.font = BSFont.BSContent22.font
+            $0.textColor = BSThemeColor.BSColor3.color
             $0.textAlignment = .left
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
@@ -356,8 +487,8 @@ class TaskHometViewController: UIViewController {
         }
         //小费
         taskFee.do{
-            $0.font = BSFont.BSSubTiny20.font
-            $0.textColor = BSThemeColor.BSYellow_eaa41f.color
+            $0.font = BSFont.BSContent22.font
+            $0.textColor = BSThemeColor.BSColor7.color
             $0.textAlignment = .left
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
@@ -371,34 +502,34 @@ class TaskHometViewController: UIViewController {
         //任务状态标签
         taskStatusLabel.do{
             $0.text = NSLocalizedString("任务状态", comment: "")
-            $0.font = BSFont.BSSubTiny20.font
-            $0.textColor = BSThemeColor.BSWhite_ffffff.color
+            $0.font = BSFont.BSContent22.font
+            $0.textColor = BSThemeColor.BSColor0.color
             $0.textAlignment = .left
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
             
             //test
-            $0.backgroundColor = BSThemeColor.BSBlue_5f97d8.color
+            $0.backgroundColor = BSThemeColor.BSColor5.color
             
         }
         //任务状态
         taskStatus.do{
-            $0.textColor = BSThemeColor.BSTextColorNormal_666666.color
-            $0.font = BSFont.BSSubTiny20.font
+            $0.textColor = BSThemeColor.BSColor2.color
+            $0.font = BSFont.BSContent22.font
             $0.textAlignment = .center
             $0.lineBreakMode = .byTruncatingTail
             self.contentView.addSubview($0)
             
             //test
             $0.text = "已发布"
-            $0.backgroundColor = BSThemeColor.BSDivLineColorLight_f5f5f5.color
+            $0.backgroundColor = BSThemeColor.BSColorL3.color
             
         }
         
         //分割线
         divLine2.do{
             $0.image = UIImage.size(width: 1 , height: 1)
-                .color(BSThemeColor.BSDivLineColorMid_e7e7e7.color)
+                .color(BSThemeColor.BSColorL2.color)
                 .image
             $0.contentMode = .scaleToFill
             self.contentView.addSubview($0)

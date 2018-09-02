@@ -26,7 +26,7 @@ public class BSStatusBar: UIView {
     public override init(frame: CGRect) {       
 
         super.init(frame: frame)
-        backgroundColor = BSThemeColor.BSTitleBlue_3399ff.color
+        backgroundColor = BSThemeColor.BSColor4.color
         
     }
 }

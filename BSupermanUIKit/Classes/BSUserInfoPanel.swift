@@ -13,7 +13,7 @@ import Nuke
 fileprivate let LineMargin:CGFloat = 8  //行距
 fileprivate let DivLineHight:CGFloat = 1  //分割线高度
 fileprivate let TitleIconWidth:CGFloat = 20
-fileprivate let AvatarIconWidth:CGFloat = 64
+fileprivate let AvatarIconWidth:CGFloat = 48
 
 
 public class BSUserInfoPanel: UIStackView {
@@ -80,11 +80,11 @@ public class BSUserInfoPanel: UIStackView {
     
     // 分割线1
     private let divLine = UIView(frame: CGRect.zero).then{
-        $0.backgroundColor = BSThemeColor.BSDivLineColorMid_e7e7e7.color
+        $0.backgroundColor = BSThemeColor.BSColorL2.color
     }
     // 分割线2
     private let divLine2 = UIView(frame: CGRect.zero).then{
-        $0.backgroundColor = BSThemeColor.BSDivLineColorMid_e7e7e7.color
+        $0.backgroundColor = BSThemeColor.BSColorL2.color
     }
     
     //标题部分
@@ -218,8 +218,8 @@ extension BSUserInfoPanel{
         titleIcon.image = iconImage
  
         //titleLabel.text = theData.titleLabel
-        titleLabel.textColor = BSThemeColor.BSTitleBlue_3399ff.color
-        titleLabel.font = BSFont.BSContent24.font
+        titleLabel.textColor = BSThemeColor.BSColor4.color
+        titleLabel.font = BSFont.BSTitle32.font
         titleLabel.textAlignment = .left
         titleLabel.setContentCompressionResistancePriority(.fittingSizeLevel, for: .horizontal)
             
@@ -231,53 +231,53 @@ extension BSUserInfoPanel{
         //设置圆角半径(宽度的一半)，显示成圆形
         avatar.layer.cornerRadius = AvatarIconWidth / 2
         //设置边框
-        avatar.layer.borderColor = BSThemeColor.BSDivLineColorDark_cccccc.color.cgColor
+        avatar.layer.borderColor = BSThemeColor.BSColorL1.color.cgColor
         avatar.layer.borderWidth = 2.0
  
         
-        level.textColor = BSThemeColor.BSTextColorTiny_999999.color
-        level.font = BSFont.BSSubTiny16.font
+        level.textColor = BSThemeColor.BSColor3.color
+        level.font = BSFont.BSContent22.font
         level.textAlignment = .center
         //level.text = theData.level
         
         
         //右边信息
-        nickname.textColor = BSThemeColor.BSTextColor_373a3d.color
-        nickname.font = BSFont.BSContent22.font
+        nickname.textColor = BSThemeColor.BSColor1.color
+        nickname.font = BSFont.BSTitle32.font
         nickname.textAlignment = .left
         //nickname.backgroundColor = UIColor.green
         
-        signature.textColor = BSThemeColor.BSTextColorTiny_999999.color
-        signature.font = BSFont.BSContent22.font
+        signature.textColor = BSThemeColor.BSColor3.color
+        signature.font = BSFont.BSTitle32.font
         signature.textAlignment = .left
         //signature.backgroundColor = UIColor.red
         signature.setContentCompressionResistancePriority(.fittingSizeLevel, for: .horizontal)
         signature.setContentHuggingPriority(.fittingSizeLevel, for: .horizontal)
         
-        taskNumberLabel.textColor = BSThemeColor.BSTextColor_373a3d.color
-        taskNumberLabel.font = BSFont.BSSubTiny20.font
+        taskNumberLabel.textColor = BSThemeColor.BSColor1.color
+        taskNumberLabel.font = BSFont.BSContent24.font
         taskNumberLabel.textAlignment = .left
         taskNumberLabel.text = "完成任务数:"
         
-        taskNumber.textColor = BSThemeColor.BSTextColor_373a3d.color
-        taskNumber.font = BSFont.BSSubTiny20.font
+        taskNumber.textColor = BSThemeColor.BSColor1.color
+        taskNumber.font = BSFont.BSContent24.font
         taskNumber.textAlignment = .left
         taskNumber.setContentCompressionResistancePriority(.fittingSizeLevel, for: .horizontal)
         taskNumber.setContentHuggingPriority(.fittingSizeLevel, for: .horizontal)
         
         //ratingLabel
-        ratingA.textColor = BSThemeColor.BSRed_ea1f32.color
-        ratingA.font = BSFont.BSContent22.font
+        ratingA.textColor = BSThemeColor.BSColor6.color
+        ratingA.font = BSFont.BSContent24.font
         ratingA.textAlignment = .left
         //ratingA.text = theData.ratingA
         
-        ratingB.textColor = BSThemeColor.BSYellow_eaa41f.color
-        ratingB.font = BSFont.BSContent22.font
+        ratingB.textColor = BSThemeColor.BSColor7.color
+        ratingB.font = BSFont.BSContent24.font
         ratingB.textAlignment = .left
         //ratingB.text = theData.ratingB
         
-        ratingC.textColor = BSThemeColor.BSTextColorTiny_999999.color
-        ratingC.font = BSFont.BSContent22.font
+        ratingC.textColor = BSThemeColor.BSColor3.color
+        ratingC.font = BSFont.BSContent24.font
         ratingC.textAlignment = .left
         //ratingC.text = theData.ratingC
         ratingC.setContentCompressionResistancePriority(.fittingSizeLevel, for: .horizontal)

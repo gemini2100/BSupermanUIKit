@@ -25,13 +25,6 @@ public enum BSFont {
     case BSContent24
     ///字号：22px 用于大多数文字，如小标题，模块描述等
     case BSContent22
-    
-    ///字号：20px 辅助性文字，备注信息等等
-    case BSSubTiny20
-    ///字号：18px 辅助性文字，备注信息等等
-    case BSSubTiny18
-    ///字号：16px 辅助性文字，备注信息等等
-    case BSSubTiny16
 
     
     public var font: UIFont {
@@ -52,17 +45,11 @@ public enum BSFont {
         case .BSContent22:
             return UIFont.systemFont(ofSize: pointSizeFrom(pixelSize: 22))
 
-        case .BSSubTiny20:
-            return UIFont.systemFont(ofSize: pointSizeFrom(pixelSize: 20))
-        case .BSSubTiny18:
-            return UIFont.systemFont(ofSize: pointSizeFrom(pixelSize: 18))
-        case .BSSubTiny16:
-            return UIFont.systemFont(ofSize: pointSizeFrom(pixelSize: 16))
         }
     }
     
     public func pointSizeFrom(pixelSize:Float) -> CGFloat {
-        let pointSize:Int = Int(pixelSize * 0.75)
+        let pointSize:Int = Int(pixelSize / 2) + 1
         return CGFloat(pointSize)
     }
 }
