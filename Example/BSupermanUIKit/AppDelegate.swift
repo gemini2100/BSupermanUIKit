@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.window = UIWindow()
         self.window?.backgroundColor = UIColor.white
-        self.window?.rootViewController = TaskDetailsViewController()
+        self.window?.rootViewController = LoginViewController()
         self.window?.makeKeyAndVisible()
         
         return true

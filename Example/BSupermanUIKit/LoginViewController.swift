@@ -39,7 +39,20 @@ class LoginViewController: UIViewController {
         //$0.backgroundColor = UIColor.red
     }
  
-    lazy var btn_login = {BSUIKit.createTransitionButton(title: "登录")}()
+    lazy var btn_login = //{BSUIKit.createTransitionButton(title: "登录")}()
+        { () -> UIButton in
+            let button = UIButton(frame:CGRect.zero)
+            button.setTitle("title", for: .normal)
+            button.setTitleColor(BSThemeColor.BSColor0.color, for: .normal)
+            button.titleLabel?.font = BSFont.BSTitle32.font
+            button.setBackgroundImage(UIImage(color:BSThemeColor.BSColor6.color), for: .normal)
+            
+            let colorAdd:UIColor = BSThemeColor.BSColor6.color.add(overlay: UIColor(red: 0, green: 0, blue: 0, alpha: 0.2))
+            button.setBackgroundImage(UIImage(color:colorAdd), for: .highlighted)
+
+            return button
+            
+    }()
     
     
     let btn_forget = UIButton().then

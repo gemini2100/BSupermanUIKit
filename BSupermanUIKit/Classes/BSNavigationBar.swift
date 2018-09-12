@@ -92,7 +92,7 @@ public class BSNavigationBar: UIView {
 
                 titleLabel.text = "急客超人"
                 titleLabel.textColor = BSThemeColor.BSColor0.color
-                titleLabel.font = BSFont.BSTitle30.font
+                titleLabel.font = BSFont.BSTitle36.font
                 titleLabel.textAlignment = .center
 
                 titleLabel.snp.makeConstraints { (make) -> Void in
