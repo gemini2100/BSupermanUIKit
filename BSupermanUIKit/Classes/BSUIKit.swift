@@ -26,7 +26,11 @@ public class BSUIKit{
         button.setTitleColor(BSThemeColor.BSColor0.color, for: .normal)
         button.titleLabel?.font = BSFont.BSTitle32.font
         button.setBackgroundImage(UIImage(color:BSThemeColor.BSColor6.color), for: .normal)
-        button.setBackgroundImage(UIImage(color:BSThemeColor.BSColorL2.color), for: .highlighted)
+        
+        //20%黑色叠加
+        let highLightedColor = BSThemeColor.BSColor6.color.add(overlay: UIColor(red: 0, green: 0, blue: 0, alpha: 0.2))
+        
+        button.setBackgroundImage(UIImage(color:highLightedColor), for: .highlighted)
         button.setBackgroundImage(UIImage(color:BSThemeColor.BSColorL1.color), for: .disabled)
         button.layer.cornerRadius = 4
         button.layer.masksToBounds = true
@@ -40,7 +44,11 @@ public class BSUIKit{
         button.setTitleColor(BSThemeColor.BSColor0.color, for: .normal)
         button.titleLabel?.font = BSFont.BSTitle32.font
         button.setBackgroundImage(UIImage(color:BSThemeColor.BSColor5.color), for: .normal)
-        button.setBackgroundImage(UIImage(color:BSThemeColor.BSColorL2.color), for: .highlighted)
+        
+        //20%黑色叠加
+        let highLightedColor = BSThemeColor.BSColor5.color.add(overlay: UIColor(red: 0, green: 0, blue: 0, alpha: 0.2))
+        
+        button.setBackgroundImage(UIImage(color:highLightedColor), for: .highlighted)
         button.setBackgroundImage(UIImage(color:BSThemeColor.BSColorL1.color), for: .disabled)
         button.layer.cornerRadius = 4
         button.layer.masksToBounds = true
@@ -54,7 +62,11 @@ public class BSUIKit{
         button.setTitleColor(BSThemeColor.BSColor0.color, for: .normal)
         button.titleLabel?.font = BSFont.BSTitle32.font
         button.setBackgroundImage(UIImage(color:BSThemeColor.BSColor8.color), for: .normal)
-        button.setBackgroundImage(UIImage(color:BSThemeColor.BSColorL2.color), for: .highlighted)
+        
+        //20%黑色叠加
+        let highLightedColor = BSThemeColor.BSColor8.color.add(overlay: UIColor(red: 0, green: 0, blue: 0, alpha: 0.2))
+        
+        button.setBackgroundImage(UIImage(color:highLightedColor), for: .highlighted)
         button.setBackgroundImage(UIImage(color:BSThemeColor.BSColorL1.color), for: .disabled)
         button.layer.cornerRadius = 4
         button.layer.masksToBounds = true
@@ -68,7 +80,11 @@ public class BSUIKit{
         button.setTitleColor(BSThemeColor.BSColor4.color, for: .normal)
         button.titleLabel?.font = BSFont.BSTitle32.font
         button.setBackgroundImage(UIImage(color:BSThemeColor.BSColorL3.color), for: .normal)
-        button.setBackgroundImage(UIImage(color:BSThemeColor.BSColorL2.color), for: .highlighted)
+        
+        //20%黑色叠加
+        let highLightedColor = BSThemeColor.BSColorL3.color.add(overlay: UIColor(red: 0, green: 0, blue: 0, alpha: 0.2))
+        
+        button.setBackgroundImage(UIImage(color:highLightedColor), for: .highlighted)
         button.setBackgroundImage(UIImage(color:BSThemeColor.BSColorL1.color), for: .disabled)
         
         return button
