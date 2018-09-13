@@ -19,6 +19,7 @@ public enum BSThemeColor {
     case BSColor6                      ///ea1f32 红色，颜色6
     case BSColor7                      ///eaa41f 橘黄色，颜色7
     case BSColor8                      ///60a75b 深绿色，颜色8
+    case BSColor9                      ///60a75b 深绿色，颜色9
     
     case BSColorL1                     ///cccccc,分割线 颜色L1
     case BSColorL2                     ///e7e7e7,分割线 颜色L2
@@ -63,7 +64,8 @@ public enum BSThemeColor {
             return UIColor("eaa41f")
         case .BSColor8:
             return UIColor("60a75b")
-            
+        case .BSColor9:
+            return UIColor("ff7200")
        
         case .BSColor0:
             return UIColor("ffffff")

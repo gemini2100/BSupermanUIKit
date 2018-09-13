@@ -10,14 +10,16 @@ import UIKit
 
 ///移动视觉规范 规定字号
 public enum BSFont {
-     ///字号：36px 少数重要标题，导航标题、分类名称
+    ///字号：50px 特大标题，模块描述
+    case BSTitle50
+    ///字号：36px 少数重要标题，导航标题、分类名称
     case BSTitle36
     ///字号：32px 少数重要标题，导航标题、分类名称
     case BSTitle32
     ///字号：30px 一些重要的文字或操作按钮，首页模块名称
     case BSTitle30
 
-   ///字号：28px 用于大多数文字，适合大段文字，如资料简介等
+    ///字号：28px 用于大多数文字，适合大段文字，如资料简介等
     case BSContent28
     ///字号：26px 用于大多数文字，如小标题，模块描述等
     case BSContent26
@@ -29,6 +31,8 @@ public enum BSFont {
     
     public var font: UIFont {
         switch self {
+        case .BSTitle50:
+            return UIFont.systemFont(ofSize: pointSizeFrom(pixelSize: 50))
         case .BSTitle36:
             return UIFont.systemFont(ofSize: pointSizeFrom(pixelSize: 36))
         case .BSTitle32:
