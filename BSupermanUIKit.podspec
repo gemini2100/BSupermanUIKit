@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BSupermanUIKit'
-  s.version          = '0.2.6'
+  s.version          = '0.2.7'
   s.summary          = 'A UIKit library for bsuperman.'
 
 # This description is used to generate tags and improve search results.
@@ -47,6 +47,7 @@ Pod::Spec.new do |s|
    s.dependency 'RxSwift'
    s.dependency 'RxCocoa'
    s.dependency 'Nuke' 
+   s.dependency 'Action' 
   s.dependency 'BSupermanFoundation', '~> 0.1.0'
    
 end

@@ -14,6 +14,9 @@ import SnapKit
 class LoginViewController: UIViewController {
 
     
+    let statusBar = BSStatusBar(frame: CGRect.zero) //状态栏
+    private let navigationBar = BSNavigationBar(frame: CGRect.zero) //导航栏
+    
     let lbl_title = UILabel().then
     {
         $0.text = "急客超人"
@@ -89,10 +92,39 @@ class LoginViewController: UIViewController {
         self.view.addSubview(btn_forget);
         self.view.addSubview(btn_signup);
         
+        statusBar.do{
+            
+            self.view.addSubview($0)
+        }
+        
+        navigationBar.do{
+            $0.style = .Home
+            self.view.addSubview($0)
+        }
+        
         makeUIConstraints()
     }
     
     func makeUIConstraints() {
+        
+        //状态栏
+        statusBar.snp.makeConstraints{ (make) -> Void in
+            
+            make.top.equalToSuperview()
+            make.width.equalToSuperview()
+            make.height.equalTo(BSStatusBar.statusBarHeight)
+            
+        }
+        
+        
+        //导航栏
+        navigationBar.snp.makeConstraints{ (make) -> Void in
+            
+            make.top.equalTo(statusBar.snp.bottom)
+            make.width.equalToSuperview()
+            make.height.equalTo(BSNavigationBar.navBarHeight)
+            
+        }
         
         lbl_title.snp.makeConstraints { (make) -> Void in
             make.width.equalTo(self.view).multipliedBy(0.5)

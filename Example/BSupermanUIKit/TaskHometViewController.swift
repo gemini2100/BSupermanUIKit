@@ -251,6 +251,7 @@ class TaskHometViewController: UIViewController {
     
     func setNavProperty()
     {
+        navbar.style = .Home
         self.view.addSubview(statusbar)
         self.view.addSubview(navbar)
         

@@ -1,22 +1,27 @@
 PODS:
+  - Action (3.8.0):
+    - RxCocoa (~> 4.3.0)
+    - RxSwift (~> 4.3.0)
   - BSupermanFoundation (0.1.3)
-  - BSupermanUIKit (0.1.8):
+  - BSupermanUIKit (0.2.7):
+    - Action
     - BSupermanFoundation (~> 0.1.0)
     - Nuke
     - RxCocoa
     - RxSwift
     - SnapKit
-  - Nuke (7.1)
-  - RxCocoa (4.1.2):
+  - Nuke (7.4.1)
+  - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
-  - RxSwift (4.1.2)
-  - SnapKit (4.0.0)
+  - RxSwift (4.3.1)
+  - SnapKit (4.0.1)
 
 DEPENDENCIES:
   - BSupermanUIKit (from `../`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
+    - Action
     - Nuke
     - RxCocoa
     - RxSwift
@@ -29,13 +34,14 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Action: 2275d04a407ecaf46a58d58a304388a28155a0a1
   BSupermanFoundation: e45875db99e1caf9d1f9674ede0ca02dad5d7825
-  BSupermanUIKit: 4290371b7d4b2fb4f25dbdc8ad889c7b46ce261b
-  Nuke: 922cb05945ed5c7980a3ad0bc9ae57fbbd12899f
-  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
-  RxSwift: e49536837d9901277638493ea537394d4b55f570
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  BSupermanUIKit: e529abcc376f0d993d8972cb6135d0ab88599871
+  Nuke: 0f0b8df0541a14777f9b4d907371a7901c5c5a75
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
 PODFILE CHECKSUM: 3d74f171ab46e7dfc4874632030ef03b04044a18
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

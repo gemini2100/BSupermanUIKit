@@ -10,12 +10,14 @@ import UIKit
 import SnapKit
 import RxSwift
 import RxCocoa
+import Action
 
 public class BSNavigationBar: UIView {
     
     
     public enum NavBarStyle {
         case None
+        case Home
         case BackTitle
         case BackTitleNext(next: String)
         case LeftTitleRight(left: String, right: String)
@@ -27,9 +29,9 @@ public class BSNavigationBar: UIView {
     
     private var _style = NavBarStyle.None
     
-    private lazy var leftButton = UIButton(frame: CGRect.zero)
+    private lazy var leftButton = UIButton(type:.custom)
     private lazy var titleLabel = UILabel(frame: CGRect.zero)
-    private lazy var rightButton = UIButton(frame: CGRect.zero)
+    private lazy var rightButton = UIButton(type:.custom)
     
     
     public var leftTaps:Observable<Void>
@@ -40,6 +42,12 @@ public class BSNavigationBar: UIView {
     public var rightTaps:Observable<Void>
     {
         return rightButton.rx.tap.asObservable()
+    }
+    
+    func bindAction(leftAction:CocoaAction , rightAction:CocoaAction)
+    {
+        leftButton.rx.action = leftAction
+        rightButton.rx.action = rightAction
     }
     
     /// 返回导航栏高度
@@ -71,6 +79,63 @@ public class BSNavigationBar: UIView {
 
                 print("NavBarStyle None")
 
+            case .Home:
+                let frameworkBundle = Bundle(for: BSNavigationBar.self)
+                let bundleURL = frameworkBundle.resourceURL?.appendingPathComponent("BSupermanUIKit.bundle")
+                let resourceBundle = Bundle(url: bundleURL!)
+                
+                let backImage = UIImage(named: "list",
+                                         in: resourceBundle,
+                                         compatibleWith: nil)
+                
+                leftButton.setImage(backImage, for: .normal)
+                leftButton.setImage(backImage, for: .highlighted)
+                leftButton.contentHorizontalAlignment = .left
+                
+                // 添加背景色测试用代码
+            
+//                let black = UIImage.size(width: 10, height: 10)
+//                    .color(.black)
+//                    .image
+//                leftButton.setBackgroundImage(black, for: .normal)
+//                rightButton.setBackgroundImage(black, for: .normal)
+                
+                //
+                titleLabel.text = "急客超人"
+                titleLabel.textColor = BSThemeColor.BSColor0.color
+                titleLabel.font = BSFont.BSTitle36.font
+                titleLabel.textAlignment = .center
+                
+                let addImage = UIImage(named: "addbutton",
+                                        in: resourceBundle,
+                                        compatibleWith: nil)
+                
+                rightButton.setImage(addImage, for: .normal)
+                rightButton.setImage(addImage, for: .highlighted)
+                rightButton.contentHorizontalAlignment = .right
+                
+                titleLabel.snp.makeConstraints { (make) -> Void in
+                    make.height.equalToSuperview()
+                    make.center.equalToSuperview()
+                }
+                
+                leftButton.snp.makeConstraints { (make) -> Void in
+                    
+                    make.left.equalToSuperview().offset(4)
+                    make.height.equalToSuperview()
+                    make.width.equalTo(60)
+                    make.centerY.equalTo(titleLabel)
+                    
+                }
+                
+                rightButton.snp.makeConstraints { (make) -> Void in
+                    
+                    make.right.equalToSuperview().offset(-4)
+                    make.height.equalToSuperview()
+                    make.width.equalTo(60)
+                    make.centerY.equalTo(titleLabel)
+                    
+                }
             case .BackTitle:
                 
                 let frameworkBundle = Bundle(for: BSNavigationBar.self)
