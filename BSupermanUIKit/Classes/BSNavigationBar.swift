@@ -84,12 +84,12 @@ public class BSNavigationBar: UIView {
                 let bundleURL = frameworkBundle.resourceURL?.appendingPathComponent("BSupermanUIKit.bundle")
                 let resourceBundle = Bundle(url: bundleURL!)
                 
-                let backImage = UIImage(named: "list",
+                let leftImage = UIImage(named: "list",
                                          in: resourceBundle,
                                          compatibleWith: nil)
                 
-                leftButton.setImage(backImage, for: .normal)
-                leftButton.setImage(backImage, for: .highlighted)
+                leftButton.setImage(leftImage, for: .normal)
+                leftButton.setImage(leftImage, for: .highlighted)
                 leftButton.contentHorizontalAlignment = .left
                 
                 // 添加背景色测试用代码
@@ -138,43 +138,145 @@ public class BSNavigationBar: UIView {
                 }
             case .BackTitle:
                 
+//                let frameworkBundle = Bundle(for: BSNavigationBar.self)
+//                let bundleURL = frameworkBundle.resourceURL?.appendingPathComponent("BSupermanUIKit.bundle")
+//                let resourceBundle = Bundle(url: bundleURL!)
+//
+//                let backImageP = UIImage(named: "title_button_back_p",
+//                                         in: resourceBundle,
+//                                         compatibleWith: nil)
+//
+//                let backImageN = UIImage(named: "title_button_back_n",
+//                                         in: resourceBundle,
+//                                         compatibleWith: nil)
+//
+//
+//                leftButton.setImage(backImageP, for: .normal)
+//                leftButton.setImage(backImageN, for: .highlighted)
+//
+//
+//                titleLabel.text = "急客超人"
+//                titleLabel.textColor = BSThemeColor.BSColor0.color
+//                titleLabel.font = BSFont.BSTitle36.font
+//                titleLabel.textAlignment = .center
+//
+//                titleLabel.snp.makeConstraints { (make) -> Void in
+//                    make.height.equalToSuperview()
+//                    make.center.equalToSuperview()
+//                }
+//
+//                leftButton.snp.makeConstraints { (make) -> Void in
+//
+//                    make.leading.equalToSuperview()
+//                    make.height.equalToSuperview()
+//                    make.lastBaseline.equalTo(titleLabel)
+//
+//                }
                 let frameworkBundle = Bundle(for: BSNavigationBar.self)
                 let bundleURL = frameworkBundle.resourceURL?.appendingPathComponent("BSupermanUIKit.bundle")
                 let resourceBundle = Bundle(url: bundleURL!)
                 
-                let backImageP = UIImage(named: "title_button_back_p",
-                                         in: resourceBundle,
-                                         compatibleWith: nil)
+                let backImage = UIImage(named: "list",
+                                        in: resourceBundle,
+                                        compatibleWith: nil)
                 
-                let backImageN = UIImage(named: "title_button_back_n",
-                                         in: resourceBundle,
-                                         compatibleWith: nil)
-
+                leftButton.setImage(backImage, for: .normal)
+                leftButton.setImage(backImage, for: .highlighted)
+                leftButton.contentHorizontalAlignment = .left
                 
-                leftButton.setImage(backImageP, for: .normal)
-                leftButton.setImage(backImageN, for: .highlighted)
-
-
+                // 添加背景色测试用代码
+                
+                //                let black = UIImage.size(width: 10, height: 10)
+                //                    .color(.black)
+                //                    .image
+                //                leftButton.setBackgroundImage(black, for: .normal)
+                //                rightButton.setBackgroundImage(black, for: .normal)
+                
+                //
                 titleLabel.text = "急客超人"
                 titleLabel.textColor = BSThemeColor.BSColor0.color
                 titleLabel.font = BSFont.BSTitle36.font
                 titleLabel.textAlignment = .center
-
+                
+                rightButton.isHidden = true
+                
                 titleLabel.snp.makeConstraints { (make) -> Void in
                     make.height.equalToSuperview()
                     make.center.equalToSuperview()
                 }
-
+                
                 leftButton.snp.makeConstraints { (make) -> Void in
-
-                    make.leading.equalToSuperview()
+                    
+                    make.left.equalToSuperview().offset(4)
                     make.height.equalToSuperview()
-                    make.lastBaseline.equalTo(titleLabel)
-
+                    make.width.equalTo(60)
+                    make.centerY.equalTo(titleLabel)
+                    
+                }
+                
+                rightButton.snp.makeConstraints { (make) -> Void in
+        
+                    make.right.equalToSuperview().offset(-4)
+                    make.width.height.equalTo(0)
+                    make.centerY.equalTo(titleLabel)
+                    
                 }
 
             case .BackTitleNext(let next):
-                print("BackTitleNext: \(next)")
+                let frameworkBundle = Bundle(for: BSNavigationBar.self)
+                let bundleURL = frameworkBundle.resourceURL?.appendingPathComponent("BSupermanUIKit.bundle")
+                let resourceBundle = Bundle(url: bundleURL!)
+                
+                let leftImage = UIImage(named: "back",
+                                        in: resourceBundle,
+                                        compatibleWith: nil)
+                
+                leftButton.setImage(leftImage, for: .normal)
+                leftButton.setImage(leftImage, for: .highlighted)
+                leftButton.contentHorizontalAlignment = .left
+                
+                // 添加背景色测试用代码
+                
+                //                let black = UIImage.size(width: 10, height: 10)
+                //                    .color(.black)
+                //                    .image
+                //                leftButton.setBackgroundImage(black, for: .normal)
+                //                rightButton.setBackgroundImage(black, for: .normal)
+                
+                //
+                titleLabel.text = "急客超人"
+                titleLabel.textColor = BSThemeColor.BSColor0.color
+                titleLabel.font = BSFont.BSTitle36.font
+                titleLabel.textAlignment = .center
+                
+               
+                
+                rightButton.setTitle(next, for: .normal)
+                rightButton.setTitle(next, for: .highlighted)
+                rightButton.contentHorizontalAlignment = .right
+                
+                titleLabel.snp.makeConstraints { (make) -> Void in
+                    make.height.equalToSuperview()
+                    make.center.equalToSuperview()
+                }
+                
+                leftButton.snp.makeConstraints { (make) -> Void in
+                    
+                    make.left.equalToSuperview().offset(4)
+                    make.height.equalToSuperview()
+                    make.width.equalTo(60)
+                    make.centerY.equalTo(titleLabel)
+                    
+                }
+                
+                rightButton.snp.makeConstraints { (make) -> Void in
+                    
+                    make.right.equalToSuperview().offset(-4)
+                    make.height.equalToSuperview()
+                    make.width.equalTo(60)
+                    make.centerY.equalTo(titleLabel)
+                    
+                }
 
             case .LeftTitleRight(let left, let right):
                 print("LeftTitleRight: \(left),\(right)")

@@ -229,4 +229,11 @@ public class BSUIKit{
         
         return ret
     }
+    
+    static public func createDivLine() -> UIView
+    {
+        let ret = UIView(frame: CGRect.zero)
+        ret.backgroundColor = BSThemeColor.BSColorL2.color
+        return ret
+    }
 }
