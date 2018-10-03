@@ -44,7 +44,7 @@ public class BSNavigationBar: UIView {
         return rightButton.rx.tap.asObservable()
     }
     
-    func bindAction(leftAction:CocoaAction , rightAction:CocoaAction)
+    public func bindAction(leftAction:CocoaAction , rightAction:CocoaAction)
     {
         leftButton.rx.action = leftAction
         rightButton.rx.action = rightAction
