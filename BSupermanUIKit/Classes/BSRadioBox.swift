@@ -10,7 +10,7 @@ import Foundation
 public class BSRadioBox: UIButton {
     // Images
     let checkedImage = UIImage.LoadImageFromBundle(name: "radio_selected")
-    let uncheckedImage = UIImage.LoadImageFromBundle(name: "radio")
+    let uncheckedImage = UIImage.LoadImageFromBundle(name: "radio_n")
     
     // Bool property
     var isChecked: Bool = false {
