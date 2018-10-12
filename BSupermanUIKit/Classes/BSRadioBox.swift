@@ -33,6 +33,15 @@ public class BSRadioBox: UIButton {
         self.addTarget(self, action:#selector(buttonClicked(sender:)), for: UIControlEvents.touchUpInside)
         self.isChecked = false
         self.setImage(uncheckedImage, for: UIControlState.normal)
+        centerTextAndImage(spacing: 4.0)
+        
+    }
+    
+    func centerTextAndImage(spacing: CGFloat) {
+        let insetAmount = spacing / 2
+        imageEdgeInsets = UIEdgeInsets(top: 0, left: -insetAmount, bottom: 0, right: insetAmount)
+        titleEdgeInsets = UIEdgeInsets(top: 0, left: insetAmount, bottom: 0, right: -insetAmount)
+        contentEdgeInsets = UIEdgeInsets(top: 0, left: insetAmount, bottom: 0, right: insetAmount)
     }
     
     @objc func buttonClicked(sender: UIButton) {

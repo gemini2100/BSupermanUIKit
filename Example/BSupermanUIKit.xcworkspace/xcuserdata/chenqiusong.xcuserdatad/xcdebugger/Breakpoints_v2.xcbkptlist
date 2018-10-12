@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSupermanUIKit/TaskHometViewController.swift"
-            timestampString = "559822636.411868"
+            timestampString = "560998549.150749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "260"
-            endingLineNumber = "260"
+            startingLineNumber = "278"
+            endingLineNumber = "278"
             landmarkName = "setNavProperty()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSupermanUIKit/TaskHometViewController.swift"
-            timestampString = "559822636.411937"
+            timestampString = "560998549.151136"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "265"
-            endingLineNumber = "265"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
             landmarkName = "makeNavConstraints()"
             landmarkType = "7">
          </BreakpointContent>

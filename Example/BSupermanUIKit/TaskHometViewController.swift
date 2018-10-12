@@ -153,6 +153,20 @@ class TaskHometViewController: UIViewController {
 //        view.addSubview(testBtn)
 //        view.addSubview(testBtn2)
 //        view.addSubview(testBtn3)
+        
+     
+        testBtn4.do{
+            $0.setTitleColor(BSThemeColor.BSColor1.color, for: .normal)
+            $0.titleLabel?.font = BSFont.BSContent28.font
+            $0.setTitle("同意本任务电子协议", for: .normal)
+            $0.contentHorizontalAlignment = .left
+            
+//            $0.setContentHuggingPriority(.fittingSizeLevel, for: .horizontal)
+//            $0.setContentCompressionResistancePriority(.fittingSizeLevel, for: .horizontal)
+//
+            view.addSubview($0)
+            
+        }
 //        view.addSubview(testBtn4)
         
         /*
@@ -228,25 +242,29 @@ class TaskHometViewController: UIViewController {
             make.height.equalTo(50)
             
         }
-        
+ 
         testBtn3.snp.makeConstraints{ (make) in
-            
+         
             make.top.equalTo(testBtn2.snp.bottom).offset(20)
             make.left.equalTo(20)
             make.width.height.equalTo(20)
-            
-            
+
         }
-        
+        */
         testBtn4.snp.makeConstraints{ (make) in
             
-            make.top.equalTo(testBtn2.snp.bottom).offset(20)
-            make.left.equalTo(testBtn3.snp.right).offset(20)
-            make.width.height.equalTo(20)
+//            make.top.equalTo(testBtn2.snp.bottom).offset(20)
+//            make.left.equalTo(testBtn3.snp.right).offset(20)
+//            make.width.height.equalTo(20)
+            
+            
+            make.top.equalToSuperview().offset(20)
+            make.left.equalTo(20)
+            make.width.height.equalToSuperview()
             
         }
         
-        */
+        
     }
     
     func setNavProperty()
